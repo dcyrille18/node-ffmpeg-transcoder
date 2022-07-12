@@ -1,0 +1,40 @@
+{
+  "name": "ffmpeg-transcoder",
+  "version": "0.0.1",
+  "description": "Powerful ffmpeg media transcoder",
+  "scripts": {
+    "build": "rimraf dist && tsc"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcyrille18/node-ffmpeg-transcoder.git"
+  },
+  "keywords": [
+    "ffmpeg",
+    "transcoder"
+  ],
+  "author": "Cyrille DROMAS",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/dcyrille18/node-ffmpeg-transcoder/issues"
+  },
+  "homepage": "https://github.com/dcyrille18/node-ffmpeg-transcoder#readme",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "lodash": "^4.17.21",
+    "os": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^18.0.3",
+    "rimraf": "^3.0.2",
+    "tsc": "^2.0.4",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}
