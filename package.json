@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "Powerful ffmpeg media transcoder",
   "scripts": {
-    "build": "rimraf dist && tsc"
+    "clean": "rimraf dist/",
+    "copy:files": "yarn copy:locales",
+    "copy:locales": "copyfiles -u 1 src/locales/Core/* src/locales/Ratings/* src/locales/countries.json src/locales/iso6392.txt dist/",
+    "build": "yarn clean && tsc && yarn copy:files"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -32,6 +35,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.182",
     "@types/node": "^18.0.3",
+    "copyfiles": "^2.4.1",
     "rimraf": "^3.0.2",
     "tsc": "^2.0.4",
     "tslib": "^2.4.0",
